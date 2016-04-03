@@ -1,17 +1,22 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-// import Main from './Main';
+import Main from './Main';
 
 Vue.use(VueRouter);
-console.log(Vue);
+
 /* eslint-disable no-new */
 /*
+
 new Vue({
   el: 'body',
   components: { Main }
 })
 */
 // Define some components
+var Hello = Vue.extend({
+    components: { Main }
+});
+
 var Foo = Vue.extend({
     template: '<p>This is foo!</p>'
 });
@@ -41,6 +46,9 @@ router.map({
     },
     '/bar': {
         component: Bar
+    },
+    '/hello': {
+        component: Hello
     }
 });
 
