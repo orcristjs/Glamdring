@@ -4,7 +4,7 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/app.js'
   },
   output: {
     path: path.resolve(__dirname, '../dist/static'),
@@ -23,7 +23,6 @@ module.exports = {
   },
   module: {
     preLoaders: [
-        /*
       {
         test: /\.vue$/,
         loader: 'eslint',
@@ -36,7 +35,6 @@ module.exports = {
         include: projectRoot,
         exclude: /node_modules/
       }
-      */
     ],
     loaders: [
       {
