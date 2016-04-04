@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "vue": "^1.0.18",
+    "vue-router": "^0.7.11",
     "babel-runtime": "^5.8.0"
   },
   "devDependencies": {
@@ -59,6 +60,7 @@
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^8.2.1",
     "vue-style-loader": "^1.0.0",
+    "vue-router": "^0.7.11",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
