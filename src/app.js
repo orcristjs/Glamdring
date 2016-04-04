@@ -101,15 +101,14 @@ router.map({
     }
 });
 
-// 添加beforeEach无法正常读取tpl?
-/*
+// 添加全局前置钩子函数beforeEach
 router.beforeEach(function (transition) {
-    console.log(transition);
-    if (transition.to.user) {
-        console.log('Hello ' + transition.to.user + ' !');
+    if (transition.to.path.match(/forbidden/i)) {
+        transition.abort();
+    } else {
+        transition.next();
     }
 });
-*/
 
 // Now we can start the app!
 // The router will create an instance of App and mount to
