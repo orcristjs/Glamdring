@@ -26,7 +26,9 @@ var Foo = Vue.extend({
 });
 
 var Bar = Vue.extend({
-    template: '<p>This is bar!</p>'
+    template:
+        '<p>This is bar!</p>' +
+        '<router-view></router-view>'
 });
 
 var Baz = Vue.extend({
@@ -87,7 +89,15 @@ router.map({
         }
     },
     '/bar': {
-        component: Bar
+        component: Bar,
+        subRoutes: {
+            '/:barID': {
+                name: 'one_piece',
+                component: {
+                    template: '<h5>This is the Bar with the barID:<span style="color: red">{{ $route.params.barID}}</span></h5>'
+                }
+            }
+        }
     },
     '/hello': {
         component: Hello
