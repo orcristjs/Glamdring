@@ -40,10 +40,11 @@ var Baz = Vue.extend({
 // because we are using the HTML as the app template.
 var App = Vue.extend({});
 
-// Create a router instance.
-// You can pass in additional options here, but let's
-// keep it simple for now.
-var router = new VueRouter();
+// Create a router instance + configs
+var router = new VueRouter({
+    hashbang: false
+});
+console.log(router);
 
 // Define some routes.
 // Each route should map to a component. The "component" can
