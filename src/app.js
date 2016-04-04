@@ -113,8 +113,6 @@ configRouter(router, Hello);
 //     }
 // });
 
-// 添加beforeEach无法正常读取tpl?
-
 // 添加全局前置钩子函数beforeEach
 router.beforeEach(function (transition) {
     if (transition.to.path.match(/forbidden/i)) {
@@ -123,9 +121,11 @@ router.beforeEach(function (transition) {
         transition.next();
     }
 });
+
 router.afterEach(function ({ to, from }) {
     console.log(from);
     console.log('router obj is loaded. Path: ' + to.path);
 });
+
 
 router.start(App, '#app');
