@@ -51,13 +51,22 @@ var router = new VueRouter();
 router.map({
     '/foo': {
         component: Foo,
+        // custom key in $router
+        auth: 'Boyang',
         // 在/foo下设置一个子路由
         subRoutes: {
             '/': {
                 // 当匹配到 /foo 时，这个组件会被渲染到 Foo 组件的 <router-view> 中。
                 // 为了简便，这里使用了一个组件的定义
+                auth: 'ShangBoyang', // sub routerObj will re-write the param
+                user: 'yang8701@gmail.com',
                 component: {
-                    template: '<p>Default sub view for Foo</p>'
+                    template: '<p>Default sub view for Foo</p>' +
+                        '<h5>Path: {{ $route.path }}</h5>' +
+                        '<h5>Auth: {{ $route.auth }}</h5>' +
+                        '<h5>User: {{ $route.user }}</h5>' +
+                        '<h5>Query: {{ $route.query | json }}</h5>' +
+                        '<h5>Params: {{ $route.params | json }}</h5>'
                 }
             },
             '/bar': {
@@ -71,6 +80,12 @@ router.map({
             }
         }
     },
+    '/user/:username': {
+        component: {
+            // 动态参数 msgs in $route.params
+            template: '<p>username: <b>{{ $route.params.username }}</b></p>'
+        }
+    },
     '/bar': {
         component: Bar
     },
@@ -78,7 +93,17 @@ router.map({
         component: Hello
     }
 });
-console.log(router);
+
+// 添加beforeEach无法正常读取tpl?
+/*
+router.beforeEach(function (transition) {
+    console.log(transition);
+    if (transition.to.user) {
+        console.log('Hello ' + transition.to.user + ' !');
+    }
+});
+*/
+
 // Now we can start the app!
 // The router will create an instance of App and mount to
 // the element matching the selector #app.
