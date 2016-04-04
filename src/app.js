@@ -127,4 +127,5 @@ router.afterEach(function ({ to, from }) {
     console.log('router obj is loaded. Path: ' + to.path);
 });
 
+
 router.start(App, '#app');
