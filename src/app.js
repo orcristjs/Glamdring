@@ -4,7 +4,6 @@ import { configRouter } from './route-config';
 import Main from './Main';
 
 Vue.use(VueRouter);
-
 /* eslint-disable no-new */
 
 new Vue({
