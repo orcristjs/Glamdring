@@ -110,6 +110,11 @@ router.beforeEach(function (transition) {
     }
 });
 
+router.afterEach(function ({ to, from }) {
+    console.log(from);
+    console.log('router obj is loaded. Path: ' + to.path);
+});
+
 // Now we can start the app!
 // The router will create an instance of App and mount to
 // the element matching the selector #app.
