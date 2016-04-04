@@ -11,7 +11,6 @@ import Main from './Main';
 // });
 
 Vue.use(VueRouter);
-
 /* eslint-disable no-new */
 
 new Vue({
