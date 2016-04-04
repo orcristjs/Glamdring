@@ -69,16 +69,12 @@ router.map({
                         '<h5>Auth: {{ $route.auth }}</h5>' +
                         '<h5>User: {{ $route.user }}</h5>' +
                         '<h5>Query: {{ $route.query | json }}</h5>' +
-                        '<h5>Params: {{ $route.params | json }}</h5>'
+                        '<h5>Params: {{ $route.params | json }}</h5>' +
+                        '<a v-link="{ path: \'baz\', append: true, activeClass: \'custom-active-class\' }">Go to Baz</a>'
                 }
             },
-            '/bar': {
-                // 当匹配到/foo/bar时，会在Foo's <router-view>内渲染
-                // 一个Bar组件
-                component: Bar
-            },
             '/baz': {
-                // Baz也是一样，不同之处是匹配的路由会是/foo/baz
+                // 当匹配到/foo/baz时，会在Foo's <router-view>内渲染
                 component: Baz
             }
         }
