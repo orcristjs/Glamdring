@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 new Vue({
     el: '.title',
-    data:
+    data: {
         message: 'hello vue.js is'
     },
     methods: {
