@@ -8,6 +8,7 @@ import { configRouter } from './config/route-config';
 import 'bootstrap/less/bootstrap.less';
 
 Vue.use(VueRouter);
+
 /* eslint-disable no-new */
 
 // The router needs a root component to render.
