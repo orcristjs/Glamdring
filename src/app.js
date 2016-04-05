@@ -10,7 +10,7 @@ Vue.use(VueRouter);
 
 new Vue({
     el: '.title',
-    data: {
+    data:
         message: 'hello vue.js is'
     },
     methods: {
@@ -21,6 +21,11 @@ new Vue({
             console.log(event.target.tagName);
         }
     }
+});
+
+// Define some components
+var Hello = Vue.extend({
+    components: { Main }
 });
 
 // var Foo = Vue.extend({
