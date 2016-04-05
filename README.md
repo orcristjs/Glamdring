@@ -12,6 +12,7 @@ npm install
 npm run dev
 
 # build for production with minification
+//应用打包的数据
 npm run build
 
 # run unit tests
