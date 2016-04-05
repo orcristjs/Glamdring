@@ -2,16 +2,32 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Main from './Main';
 
+// Vue({
+//     el: '#app',
+//     data: {
+//         message: 'Hello Vue.js!'
+//     }
+// });
+
 Vue.use(VueRouter);
 
 /* eslint-disable no-new */
-/*
 
 new Vue({
-  el: 'body',
-  components: { Main }
-})
-*/
+    el: '.title',
+    data: {
+        message: 'hello vue.js is mvvm '
+    },
+    methods: {
+        greet: function (event) {
+            // 方法内 `this` 指向 vm
+            console.log('Hello ' + this.name + '!');
+            // `event` 是原生 DOM 事件
+            console.log(event.target.tagName);
+        }
+    }
+});
+
 // Define some components
 var Hello = Vue.extend({
     components: { Main }

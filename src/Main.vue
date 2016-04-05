@@ -4,10 +4,12 @@
 
 <script>
 import Hello from './components/Hello';
+import header from './components/header';
 
 export default {
     components: {
-        Hello
+        Hello,
+        header
     }
 };
 </script>

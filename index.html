@@ -2,14 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Glamdring</title>
     </head>
     <body>
         <div id="app">
+            
+            
 
-            <h1>Hello App!</h1>
+            <h1 class="title" v-text="message" v-on:click="greet"></h1>
+
             <!-- use v-link directive for navigation. -->
-
             <p>
                 <a v-link="'home'">Home</a>
                 <!-- if route View is onload .v-link-active will be inject -->
