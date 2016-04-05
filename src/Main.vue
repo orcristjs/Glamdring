@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Hello from './components/Hello';
+import Hello from './components/ui/Hello';
 
 export default {
     components: {
