@@ -121,14 +121,13 @@ configRouter(router, Hello);
 // });
 
 // 添加beforeEach无法正常读取tpl?
-/*
-router.beforeEach(function (transition) {
-    console.log(transition);
-    if (transition.to.user) {
-        console.log('Hello ' + transition.to.user + ' !');
-    }
-});
-*/
+
+// router.beforeEach(function (transition) {
+//     console.log(transition);
+//     if (transition.to.user) {
+//         console.log('Hello ' + transition.to.user + ' !');
+//     }
+// });
 
 // Now we can start the app!
 // The router will create an instance of App and mount to
