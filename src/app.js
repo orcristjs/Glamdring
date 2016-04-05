@@ -17,7 +17,7 @@ Vue.use(VueRouter);
 new Vue({
     el: '.title',
     data: {
-        message: 'hello vue.js is mvvm '
+        message: 'hello vue.js is mvvmsssssss'
     },
     methods: {
         greet: function (event) {
