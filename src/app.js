@@ -119,6 +119,7 @@ configRouter(router, Hello);
 //     }
 // });
 
+
 // 添加全局前置钩子函数beforeEach
 router.beforeEach(function (transition) {
     if (transition.to.path.match(/forbidden/i)) {
