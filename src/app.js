@@ -5,9 +5,9 @@ import Main from './views/main.vue';
 import store from './config/store-config';
 import { sync } from 'vuex-router-sync';
 
+
 Vue.use(VueRouter);
 /* eslint-disable no-new */
-
 // The router needs a root component to render.
 // For demo purposes, we will just use an empty one
 // because we are using the HTML as the app template.

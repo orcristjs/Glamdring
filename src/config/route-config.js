@@ -3,7 +3,8 @@ import Baz from '../components/ui/Baz.vue';
 import Bar from '../components/ui/Bar.vue';
 import MySpace from '../views/MySpace/index.vue';
 
-export default function (router, Hello) {
+export default function (router) {
+
     // normal routes
     router.map({
         '/myspace': {
