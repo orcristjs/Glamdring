@@ -16,7 +16,7 @@ Vue.use(VueRouter);
 new Vue({
     el: '.title',
     data: {
-        message: 'hello vue.js is mvvmsssssss'
+        message: 'hello vue.js is'
     },
     methods: {
         greet: function (event) {
@@ -134,7 +134,4 @@ router.afterEach(function ({ to, from }) {
     console.log('router obj is loaded. Path: ' + to.path);
 });
 
-// Now we can start the app!
-// The router will create an instance of App and mount to
-// the element matching the selector #app.
 router.start(App, '#app');
