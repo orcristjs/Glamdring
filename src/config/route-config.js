@@ -2,7 +2,7 @@ export function configRouter (router, Hello) {
     // normal routes
     router.map({
         '/foo': {
-            component: require('./components/ui/Foo.vue'),
+            component: require('../components/ui/Foo.vue'),
             // custom key in $router
             auth: 'Boyang',
             // 在/foo下设置一个子路由
@@ -24,7 +24,7 @@ export function configRouter (router, Hello) {
                 },
                 '/baz': {
                     // 当匹配到/foo/baz时，会在Foo's <router-view>内渲染
-                    component: require('./components/ui/Baz.vue')
+                    component: require('../components/ui/Baz.vue')
                 }
             }
         },
@@ -35,7 +35,7 @@ export function configRouter (router, Hello) {
             }
         },
         '/bar': {
-            component: require('./components/ui/Bar.vue'),
+            component: require('../components/ui/Bar.vue'),
             subRoutes: {
                 '/:barID': {
                     name: 'one_piece',
