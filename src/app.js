@@ -3,13 +3,6 @@ import VueRouter from 'vue-router';
 import { configRouter } from './route-config';
 import Main from './Main';
 
-// Vue({
-//     el: '#app',
-//     data: {
-//         message: 'Hello Vue.js!'
-//     }
-// });
-
 Vue.use(VueRouter);
 
 /* eslint-disable no-new */
