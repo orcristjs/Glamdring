@@ -17,7 +17,7 @@ Vue.use(VueRouter);
 new Vue({
     el: '.title',
     data: {
-        message: 'hello vue.js is mvvmsssssss'
+        message: 'hello vue.js is'
     },
     methods: {
         greet: function (event) {
@@ -122,14 +122,17 @@ configRouter(router, Hello);
 
 // 添加beforeEach无法正常读取tpl?
 
-// router.beforeEach(function (transition) {
-//     console.log(transition);
-//     if (transition.to.user) {
-//         console.log('Hello ' + transition.to.user + ' !');
-//     }
-// });
+// 添加全局前置钩子函数beforeEach
+router.beforeEach(function (transition) {
+    if (transition.to.path.match(/forbidden/i)) {
+        transition.abort();
+    } else {
+        transition.next();
+    }
+});
+router.afterEach(function ({ to, from }) {
+    console.log(from);
+    console.log('router obj is loaded. Path: ' + to.path);
+});
 
-// Now we can start the app!
-// The router will create an instance of App and mount to
-// the element matching the selector #app.
 router.start(App, '#app');
