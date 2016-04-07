@@ -1,4 +1,5 @@
 <template>
+<<<<<<< a0ca1daca63002de3c87b1ed2d9acc7c8f6d273c
     <div>
         <Go></Go>
         <h3>MySpace {{ msg }}</h3>
@@ -13,10 +14,22 @@ import { getSpaceData } from '../../store/MySpace/getters';
 
 export default {
     components: { Go }, // 麻痹的用自定义不解析？？？？
+=======
+    <G-Header></G-Header>
+    <h3>MySpace {{ msg }}</h3>
+    <router-view></router-view>
+</template>
+<script>
+import G-Header from '../../components/ui/Header.vue';
+
+export default {
+    components: { G-Header },
+>>>>>>> views-ui
     data () {
         return {
             msg: '紫微宸居'
         };
+<<<<<<< a0ca1daca63002de3c87b1ed2d9acc7c8f6d273c
     },
     route: {
         activate () {
@@ -33,6 +46,8 @@ export default {
         actions: {
             getMySpace
         }
+=======
+>>>>>>> views-ui
     }
 };
 

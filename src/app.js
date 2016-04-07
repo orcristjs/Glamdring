@@ -1,9 +1,16 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+<<<<<<< a0ca1daca63002de3c87b1ed2d9acc7c8f6d273c
 import configRouter from './config/route-config';
 import Main from './views/main.vue';
 import store from './config/store-config';
 import { sync } from 'vuex-router-sync';
+=======
+import { configRouter } from './config/route-config';
+import 'bootstrap/less/bootstrap.less';
+import { configRouter } from './route-config';
+import Main from './Main';
+>>>>>>> views-ui
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
@@ -35,6 +42,10 @@ var router = new VueRouter({
     // suppressTransitionError: true
 });
 
+<<<<<<< a0ca1daca63002de3c87b1ed2d9acc7c8f6d273c
+=======
+// configRouter(router, Hello);
+>>>>>>> views-ui
 configRouter(router);
 sync(store, router);
 
