@@ -1,9 +1,15 @@
 <template>
-    <div class="gr-header">Header</div>
-    <div>返回</div>
+    <div class="gr-header">
+        <span @click="back">返回</span>Header
+    </div>
 </template>
 <script>
 export default {
+    methods: {
+        back: function () {
+            console.log('back...........');
+        }
+    }
 };
 </script>
 <style>
@@ -13,5 +19,9 @@ export default {
     line-height: 33px;
     text-align: center;
     background: #ff6600; color: #fff;
+}
+.gr-span {
+    display: block;
+    width: 50px; height: 33px;
 }
 </style>
