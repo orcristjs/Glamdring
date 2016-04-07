@@ -5,7 +5,6 @@ import Main from './views/main.vue';
 import store from './config/store-config';
 import { sync } from 'vuex-router-sync';
 
-
 Vue.use(VueRouter);
 /* eslint-disable no-new */
 // The router needs a root component to render.
