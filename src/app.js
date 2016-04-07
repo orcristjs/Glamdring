@@ -1,9 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+<<<<<<< 80320bd2924c7d606fd3d3e50229d8b8ab4554eb
 import configRouter from './config/route-config';
 import Main from './views/main.vue';
 import store from './config/store-config';
 import { sync } from 'vuex-router-sync';
+import { configRouter } from './config/route-config';
+import 'bootstrap/less/bootstrap.less';
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
