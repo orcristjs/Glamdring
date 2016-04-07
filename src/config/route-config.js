@@ -1,10 +1,15 @@
 import Foo from '../components/ui/Foo.vue';
 import Baz from '../components/ui/Baz.vue';
 import Bar from '../components/ui/Bar.vue';
+import MySpace from '../views/MySpace/index.vue';
 
 export default function (router, Hello) {
     // normal routes
     router.map({
+        '/myspace': {
+            name: 'mySpace',
+            component: MySpace
+        },
         '/foo': {
             name: 'foo',
             component: Foo,
@@ -30,7 +35,7 @@ export default function (router, Hello) {
                 },
                 '/baz': {
                     // 当匹配到/foo/baz时，会在Foo's <router-view>内渲染
-                    component: Bar
+                    component: Baz
                 }
             }
         },

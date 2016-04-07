@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { configRouter } from './config/route-config';
+import configRouter from './config/route-config';
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 new Vue({
     el: '.title',
     data: {
-        message: 'hello vue.js is'
+        message: 'Hello vue.js is display.'
     },
     methods: {
         greet: function (event) {
