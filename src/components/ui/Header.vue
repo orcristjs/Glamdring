@@ -20,7 +20,8 @@ export default {
     text-align: center;
     background: #ff6600; color: #fff;
 }
-.gr-span {
+.gr-header span {
+    position: absolute; left: 0; top: 0;
     display: block;
     width: 50px; height: 33px;
 }

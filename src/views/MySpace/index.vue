@@ -7,10 +7,11 @@
 import Header from '../../components/ui/Header.vue';
 
 const Go = Header;
+/*
 let back = function () {
     console.log('back to Heaven');
 };
-
+*/
 export default {
     components: { Go }, // 麻痹的用自定义不解析？？？？
     data () {
