@@ -5,7 +5,7 @@
 <script>
 import header from ('../../ui/Header.vue');
 export default {
-    
+
 }
 </script>
 <style>

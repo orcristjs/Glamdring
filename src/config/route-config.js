@@ -35,11 +35,7 @@ export default function (router) {
                 },
                 '/baz': {
                     // 当匹配到/foo/baz时，会在Foo's <router-view>内渲染
-<<<<<<< 25b005c466ee1ac3d0a39648bccb566258b1b1f8
                     component: Baz
-=======
-                    component: Bar
->>>>>>> router
                 }
             }
         },
