@@ -23,29 +23,6 @@ new Vue({
     }
 });
 
-// Define some components
-var Hello = Vue.extend({
-    components: { Main }
-});
-
-// var Foo = Vue.extend({
-//     template:
-//     '<div class="foo">' +
-//         '<h2>This is Foo!</h2>' +
-//         '<router-view></router-view>' + // <- 嵌套的外链
-//     '</div>'
-// });
-
-// var Bar = Vue.extend({
-//     template:
-//         '<p>This is bar!</p>' +
-//         '<router-view></router-view>'
-// });
-
-// var Baz = Vue.extend({
-//     template: '<p>This is baz!</p>'
-// });
-
 // The router needs a root component to render.
 // For demo purposes, we will just use an empty one
 // because we are using the HTML as the app template.
@@ -58,7 +35,6 @@ var router = new VueRouter({
     // suppressTransitionError: true
 });
 
-// configRouter(router, Hello);
 configRouter(router);
 sync(store, router);
 
