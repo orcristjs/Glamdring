@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import { configRouter } from './config/route-config';
-import Main from './Main';
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
@@ -21,29 +20,6 @@ new Vue({
     }
 });
 
-// Define some components
-var Hello = Vue.extend({
-    components: { Main }
-});
-
-// var Foo = Vue.extend({
-//     template:
-//     '<div class="foo">' +
-//         '<h2>This is Foo!</h2>' +
-//         '<router-view></router-view>' + // <- 嵌套的外链
-//     '</div>'
-// });
-
-// var Bar = Vue.extend({
-//     template:
-//         '<p>This is bar!</p>' +
-//         '<router-view></router-view>'
-// });
-
-// var Baz = Vue.extend({
-//     template: '<p>This is baz!</p>'
-// });
-
 // The router needs a root component to render.
 // For demo purposes, we will just use an empty one
 // because we are using the HTML as the app template.
@@ -53,9 +29,9 @@ var App = Vue.extend({});
 var router = new VueRouter({
     hashbang: false
 });
-console.log(router);
 
-configRouter(router, Hello);
+// configRouter(router, Hello);
+configRouter(router);
 
 // Define some routes.
 // Each route should map to a component. The "component" can
@@ -111,7 +87,6 @@ configRouter(router, Hello);
 //         component: Hello
 //     }
 // });
-
 
 // 添加全局前置钩子函数beforeEach
 router.beforeEach(function (transition) {

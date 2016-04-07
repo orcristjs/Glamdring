@@ -1,8 +1,13 @@
-export function configRouter (router, Hello) {
+import Foo from '../components/ui/Foo.vue';
+import Baz from '../components/ui/Baz.vue';
+import Bar from '../components/ui/Bar.vue';
+
+export default function (router, Hello) {
     // normal routes
     router.map({
         '/foo': {
-            component: require('../components/ui/Foo.vue'),
+            name: 'foo',
+            component: Foo,
             // custom key in $router
             auth: 'Boyang',
             // 在/foo下设置一个子路由
@@ -10,6 +15,7 @@ export function configRouter (router, Hello) {
                 '/': {
                     // 当匹配到 /foo 时，这个组件会被渲染到 Foo 组件的 <router-view> 中。
                     // 为了简便，这里使用了一个组件的定义
+                    name: 'none',
                     auth: 'ShangBoyang', // sub routerObj will re-write the param
                     user: 'yang8701@gmail.com',
                     component: {
@@ -24,18 +30,20 @@ export function configRouter (router, Hello) {
                 },
                 '/baz': {
                     // 当匹配到/foo/baz时，会在Foo's <router-view>内渲染
-                    component: require('../components/ui/Baz.vue')
+                    component: Bar
                 }
             }
         },
         '/user/:username': {
+            name: 'username',
             component: {
                 // 动态参数 msgs in $route.params
                 template: '<p>username: <b>{{ $route.params.username }}</b></p>'
             }
         },
         '/bar': {
-            component: require('../components/ui/Bar.vue'),
+            name: 'bar',
+            component: Bar,
             subRoutes: {
                 '/:barID': {
                     name: 'one_piece',
