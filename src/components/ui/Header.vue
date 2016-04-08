@@ -25,6 +25,7 @@ export default {
     }
 };
 </script>
+
 <style>
 .gr-header {
     position: absolute; top: 0; left: 0;
