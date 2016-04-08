@@ -36,5 +36,4 @@ export default {
     display: block;
     width: 50px; height: 33px;
 }
-
 </style>
