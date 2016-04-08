@@ -7,6 +7,7 @@
 </template>
 <script>
 export default {
+    name: 'grHeader',
     methods: {
         backHandler () {
             window.history.back();

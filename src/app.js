@@ -1,29 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import configRouter from './config/route-config';
+import Main from './views/main.vue';
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
 
-new Vue({
-    el: '.title',
-    data: {
-        message: 'Hello vue.js is display.'
-    },
-    methods: {
-        greet: function (event) {
-            // 方法内 `this` 指向 vm
-            console.log('Hello ' + this.name + '!');
-            // `event` 是原生 DOM 事件
-            console.log(event.target.tagName);
-        }
-    }
-});
-
 // The router needs a root component to render.
 // For demo purposes, we will just use an empty one
 // because we are using the HTML as the app template.
-var App = Vue.extend({});
+var App = Vue.extend(Main);
 
 // Create a router instance + configs
 var router = new VueRouter({
@@ -106,3 +92,5 @@ router.afterEach(function ({ to, from }) {
 // The router will create an instance of App and mount to
 // the element matching the selector #app.
 router.start(App, '#app');
+
+export default router;
