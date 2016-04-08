@@ -57,9 +57,6 @@ export default function (router, Hello) {
                     }
                 }
             }
-        },
-        '/hello': {
-            component: Hello
         }
     });
 }
