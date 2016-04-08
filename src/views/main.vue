@@ -1,8 +1,12 @@
 <template>
     <div>
+<<<<<<< 9447d0b4e671872f5cbb7cdd7ac68a683e9b62e3
         <!--
         <h1 class="title" v-text="message" v-on:click="greet"></h1>
         -->
+=======
+        <h1 class="title" v-text="message" v-on:click="greet"></h1>
+>>>>>>> main layout
         <!-- use v-link directive for navigation. -->
         <p>
             <a v-link="'home'">Home</a>
@@ -22,10 +26,14 @@
     </div>
 </template>
 <script>
+<<<<<<< 9447d0b4e671872f5cbb7cdd7ac68a683e9b62e3
 import store from '../config/store-config';
 
 export default {
     store
+=======
+export default {
+>>>>>>> main layout
 };
 </script>
 <style>
