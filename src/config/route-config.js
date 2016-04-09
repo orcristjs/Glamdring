@@ -4,7 +4,6 @@ import Bar from '../components/ui/Bar.vue';
 import MySpace from '../views/MySpace/index.vue';
 
 export default function (router, Hello) {
-
     // normal routes
     router.map({
         '/myspace': {

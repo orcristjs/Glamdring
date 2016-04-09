@@ -1,5 +1,4 @@
 <template>
-<<<<<<< a0ca1daca63002de3c87b1ed2d9acc7c8f6d273c
     <div class="gr-header">
         <span class="left" @click="backHandler">返回</span>
         Header
@@ -17,13 +16,6 @@ export default {
             console.log('option');
         }
     }
-=======
-    <div class="gr-header">Header</div>
-    <div>返回</div>
-</template>
-<script>
-export default {
->>>>>>> views-ui
 };
 </script>
 <style>
