@@ -1,5 +1,7 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import VueRouter from 'vue-router';
+<<<<<<< c4efb7ff95513fcf8a733df104a4a21ac159cc21
 <<<<<<< a0ca1daca63002de3c87b1ed2d9acc7c8f6d273c
 import configRouter from './config/route-config';
 import Main from './views/main.vue';
@@ -11,6 +13,11 @@ import 'bootstrap/less/bootstrap.less';
 import { configRouter } from './route-config';
 import Main from './Main';
 >>>>>>> views-ui
+=======
+import { sync } from 'vuex-router-sync'
+import configRouter from './config/route-config';
+import Main from './views/main.vue';
+>>>>>>> update
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
@@ -48,6 +55,7 @@ var router = new VueRouter({
 >>>>>>> views-ui
 configRouter(router);
 sync(store, router);
+<<<<<<< c4efb7ff95513fcf8a733df104a4a21ac159cc21
 
 // Define some routes.
 // Each route should map to a component. The "component" can
@@ -103,6 +111,8 @@ sync(store, router);
 //         component: Hello
 //     }
 // });
+=======
+>>>>>>> update
 
 // 添加全局前置钩子函数beforeEach
 router.beforeEach(function (transition) {
