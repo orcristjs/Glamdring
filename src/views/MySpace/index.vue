@@ -7,21 +7,19 @@
     </div>
 </template>
 <script>
-<<<<<<< f1fcf60fe5414ea9977523110be2af9815555dab
 // import Vue from 'vue';
 import Go from '../../components/ui/Header.vue';
 import { getMySpace } from '../../store/MySpace/actions';
 import { getSpaceData } from '../../store/MySpace/getters';
 import Store from '../../config/store-config';
 
-console.log(Store);
-=======
-import Go from '../../components/ui/Header.vue';
->>>>>>> update
-
 /*
 const Go = Vue.extends({
     data: {
+=======
+import {getMySpace} from '../../store/MySpace/actions';
+import {getSpacesData} from '../../store/MySpace/getters';
+>>>>>>> 增加service
 
     },
     methods: {
@@ -32,10 +30,7 @@ const Go = Vue.extends({
 });
 */
 export default {
-<<<<<<< f1fcf60fe5414ea9977523110be2af9815555dab
     Store,
-=======
->>>>>>> update
     components: { Go }, // 麻痹的用自定义不解析？？？？
     data () {
         return {

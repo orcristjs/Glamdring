@@ -1,1 +1,1 @@
-export const API_ROOT = 'api';
+export const APP = 'soa/service/';
