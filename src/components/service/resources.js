@@ -11,6 +11,7 @@ Vue.http.options.emulateJSON = true;
 Vue.http.interceptors.push({
     request (request) {
         request.headers = request.headers || {};
+        console.log(request);
         return request;
     },
     response (response) {
