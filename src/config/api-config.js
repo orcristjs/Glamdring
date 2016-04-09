@@ -1,1 +1,1 @@
-const APP = {};
+export const APP = 'soa/service/';
