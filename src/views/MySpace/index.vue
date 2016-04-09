@@ -26,6 +26,7 @@ import Head from '../../components/ui/Header.vue';
 >>>>>>> main layout
 =======
 import Go from '../../components/ui/Header.vue';
+<<<<<<< 29f083a2d55e7ba30d3585f81f7dabcfc824f03d
 >>>>>>> update
 
 export default {
@@ -37,6 +38,10 @@ export default {
 </template>
 <script>
 import G-Header from '../../components/ui/Header.vue';
+=======
+import {getMySpace} from '../../store/MySpace/actions';
+import {getSpacesData} from '../../store/MySpace/getters';
+>>>>>>> 增加service
 
 export default {
 <<<<<<< c4efb7ff95513fcf8a733df104a4a21ac159cc21
@@ -58,6 +63,10 @@ export default {
     route: {
         activate () {
             this.getMySpace();
+<<<<<<< 29f083a2d55e7ba30d3585f81f7dabcfc824f03d
+=======
+            console.log('active');
+>>>>>>> 增加service
         },
         canActivate () {
             console.log('canActivate');
@@ -65,13 +74,20 @@ export default {
     },
     vuex: {
         getters: {
+<<<<<<< 29f083a2d55e7ba30d3585f81f7dabcfc824f03d
             spaces: getSpaceData
+=======
+            spaces: getSpacesData
+>>>>>>> 增加service
         },
         actions: {
             getMySpace
         }
+<<<<<<< 29f083a2d55e7ba30d3585f81f7dabcfc824f03d
 =======
 >>>>>>> views-ui
+=======
+>>>>>>> 增加service
     }
 };
 
