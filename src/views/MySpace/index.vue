@@ -1,12 +1,12 @@
 <template>
     <div>
-        <Head></Head>
+        <Go></Go>
         <h3>MySpace {{ msg }}</h3>
         <router-view></router-view>
     </div>
 </template>
 <script>
-import Head from '../../components/ui/Header.vue';
+import Go from '../../components/ui/Header.vue';
 
 /*
 const Top = Header;
@@ -16,7 +16,7 @@ let back = function () {
 */
 
 export default {
-    components: { Head }, // 麻痹的用自定义不解析？？？？
+    components: { Go }, // 麻痹的用自定义不解析？？？？
     data () {
         return {
             msg: '紫微宸居'

@@ -1,5 +1,7 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import VueRouter from 'vue-router';
+import { sync } from 'vuex-router-sync'
 import configRouter from './config/route-config';
 import Main from './views/main.vue';
 
@@ -18,6 +20,7 @@ var router = new VueRouter({
 
 // configRouter(router, Hello);
 configRouter(router);
+sync(store, router);
 
 // 添加全局前置钩子函数beforeEach
 router.beforeEach(function (transition) {
