@@ -18,4 +18,5 @@ Vue.http.interceptors.push({
     }
 });
 
-export const GetMySpaceService = Vue.resource(API_ROOT + '/spaces.json');
+// export const GetMySpaceService = Vue.resource(API_ROOT + '/spaces.json');
+export const GetMySpaceService = Vue.resource(API_ROOT + '/groupRT.php');

@@ -1,18 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import groups from './modules/groups'
-// import quotes from './modules/quotes'
-// import interval from './modules/interval'
+import MySpaceStore from '../store/MySpace/store';
 
 const debug = process.env.NODE_ENV !== 'production';
 Vue.use(Vuex);
 Vue.config.debug = debug;
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
     modules: {
-        // groups,
-        // quotes,
-        // interval
+        MySpaceStore
     },
     strict: debug
 });
+
+export default store;

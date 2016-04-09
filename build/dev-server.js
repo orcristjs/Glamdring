@@ -12,13 +12,13 @@ var compiler = webpack(config)
 // Define HTTP proxies to your custom API backend
 // https://github.com/chimurai/http-proxy-middleware
 var proxyTable = {
-  // '/api': {
-  //   target: 'http://jsonplaceholder.typicode.com',
-  //   changeOrigin: true,
-  //   pathRewrite: {
-  //     '^/api': ''
-  //   }
-  // }
+    '/api': {
+        target: 'http://apptest.zsgjs.com/X0-Testing/Testing/rabbitmq-stomp/',
+        changeOrigin: true,
+        pathRewrite: {
+            '^/api': ''
+        }
+    }
 }
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

@@ -1,6 +1,8 @@
 <template>
     <div>
+        <!--
         <h1 class="title" v-text="message" v-on:click="greet"></h1>
+        -->
         <!-- use v-link directive for navigation. -->
         <p>
             <a v-link="'home'">Home</a>
@@ -20,7 +22,10 @@
     </div>
 </template>
 <script>
+import store from '../config/store-config';
+
 export default {
+    store
 };
 </script>
 <style>

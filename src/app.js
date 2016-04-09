@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
 import VueRouter from 'vue-router';
-import { sync } from 'vuex-router-sync'
 import configRouter from './config/route-config';
 import Main from './views/main.vue';
+import store from './config/store-config';
+import { sync } from 'vuex-router-sync';
 
 Vue.use(VueRouter);
 /* eslint-disable no-new */
@@ -16,6 +16,8 @@ var App = Vue.extend(Main);
 // Create a router instance + configs
 var router = new VueRouter({
     hashbang: false
+    // saveScrollPosition: true,
+    // suppressTransitionError: true
 });
 
 // configRouter(router, Hello);
@@ -36,9 +38,14 @@ router.afterEach(function ({ to, from }) {
     console.log('router obj is loaded. Path: ' + to.path);
 });
 
+/*
+router.redirect({
+  '*': '/home/index',
+  '/home': '/home/index'
+})
+*/
+
 // Now we can start the app!
 // The router will create an instance of App and mount to
 // the element matching the selector #app.
 router.start(App, '#app');
-
-export default router;
