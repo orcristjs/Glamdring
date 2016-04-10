@@ -1,8 +1,8 @@
 <template>
     <div class="gr-header">
-        <span class="left" @click="backHandler">返回</span>
+        <span class="left" v-show="backFlag" @click="backHandler">返回</span>
         {{title}}
-        <span class="right" @click="optionHandler">分享</span>
+        <span class="right" v-show="optFlag" @click="optionHandler">分享</span>
     </div>
 </template>
 <script>
@@ -11,7 +11,9 @@ export default {
     data () {
         // console.log(this.$parent.headerTitle);
         return {
-            title: this.$parent.headerTitle || 'Glamdring Header'
+            title: this.$parent.headerTitle || 'Glamdring Header',
+            backFlag: this.$parent.backFlag,
+            optFlag: this.$parent.optFlag
         };
     },
     methods: {

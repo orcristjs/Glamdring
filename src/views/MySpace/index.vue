@@ -19,6 +19,8 @@ export default {
     data () {
         return {
             headerTitle: 'MySpace',
+            backFlag: true,
+            optFlag: true,
             msg: '紫微宸居'
         };
     },
@@ -34,6 +36,7 @@ export default {
     route: {
         activate () {
             this.getMySpace();
+            console.log('route', this);
         },
         canActivate () {
             console.log('canActivate');
