@@ -5,7 +5,7 @@
         <h1 class="title" v-text="message" v-on:click="greet"></h1>
         -->
         <!-- use v-link directive for navigation. -->
-        <p>
+        <p class="main">
             <a v-link="'home'">Home</a>
             <!-- if route View is onload .v-link-active will be inject -->
             <!-- and the classname also can be rename  -->
@@ -32,6 +32,10 @@ export default {
 };
 </script>
 <style>
+.main {
+    position: relative;;
+    top: 44px;
+}
 /* 必需 */
 .expand-transition {
     transition: all .3s ease;

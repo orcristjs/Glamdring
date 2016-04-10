@@ -30,19 +30,19 @@ export default {
 <style>
 .gr-header {
     position: absolute; top: 0; left: 0;
-    width: 100%; height: 33px;
-    line-height: 33px;
+    width: 100%; height: 44px;
+    line-height: 44px;
     text-align: center;
     background: #ff6600; color: #fff;
 }
 .gr-header span.left {
     position: absolute; left: 0; top: 0;
     display: block;
-    width: 50px; height: 33px;
+    width: 50px; height: 44px;
 }
 .gr-header span.right {
     position: absolute; right: 0; top: 0;
     display: block;
-    width: 50px; height: 33px;
+    width: 50px; height: 44px;
 }
 </style>
