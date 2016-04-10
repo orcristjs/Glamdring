@@ -33,9 +33,11 @@ router.beforeEach(function (transition) {
 });
 
 router.afterEach(function ({ to, from }) {
+    /*
     console.log(from);
     console.log('Hello');
     console.log('router obj is loaded. Path: ' + to.path);
+    */
 });
 
 /*

@@ -1,19 +1,26 @@
 <template>
     <div class="gr-header">
         <span class="left" @click="backHandler">返回</span>
-        Header
+        {{title}}
         <span class="right" @click="optionHandler">分享</span>
     </div>
 </template>
 <script>
 export default {
     name: 'grHeader',
+    data () {
+        // console.log(this.$parent.headerTitle);
+        return {
+            title: this.$parent.headerTitle || 'Glamdring Header'
+        };
+    },
     methods: {
         backHandler () {
             window.history.back();
         },
         optionHandler () {
-            console.log('option');
+            this.$dispatch('headerOptHandler');
+            // console.log('option');
         }
     }
 };

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Go></Go>
         <!--
         <h1 class="title" v-text="message" v-on:click="greet"></h1>
         -->
@@ -23,8 +24,10 @@
 </template>
 <script>
 import store from '../config/store-config';
+import Go from '../components/ui/Header.vue';
 
 export default {
+    components: { Go }, // 麻痹的用自定义不解析？？？？
     store
 };
 </script>
