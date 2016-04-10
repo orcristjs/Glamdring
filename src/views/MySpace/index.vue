@@ -13,22 +13,6 @@ import { getMySpace } from '../../store/MySpace/actions';
 import { getSpaceData } from '../../store/MySpace/getters';
 import Store from '../../config/store-config';
 
-/*
-const Go = Vue.extends({
-    data: {
-=======
-import {getMySpace} from '../../store/MySpace/actions';
-import {getSpacesData} from '../../store/MySpace/getters';
->>>>>>> 增加service
-
-    },
-    methods: {
-        backHandler: function () {
-            console.log('dddd');
-        }
-    }
-});
-*/
 export default {
     Store,
     components: { Go }, // 麻痹的用自定义不解析？？？？

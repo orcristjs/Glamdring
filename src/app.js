@@ -1,11 +1,9 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
 import VueRouter from 'vue-router';
 import configRouter from './config/route-config';
 import Main from './views/main.vue';
 import store from './config/store-config';
 import { sync } from 'vuex-router-sync';
-import { configRouter } from './config/route-config';
 import 'bootstrap/less/bootstrap.less';
 
 Vue.use(VueRouter);
